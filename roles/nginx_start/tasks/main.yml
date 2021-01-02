@@ -1,0 +1,6 @@
+---
+# tasks file for nginx_start
+  - name: Start nginx
+    service:
+      name: nginx
+      state: started
