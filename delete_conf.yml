@@ -1,0 +1,10 @@
+---
+  - name: Deleting configuration file in managed nodes
+    hosts: all
+    gather_facts: false
+    become: yes
+    tasks:  
+      - name: Deleting
+        file:
+           path: /etc/nginx/nginx.conf
+           state: absent

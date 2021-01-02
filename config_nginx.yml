@@ -1,0 +1,9 @@
+---
+ - name: Installing Nginx in all servers
+   hosts: all
+   gather_facts: false
+   become: yes
+   roles:
+     - Updating_repos
+     - nginx_install
+     - nginx_start    
